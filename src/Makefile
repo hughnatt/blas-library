@@ -36,7 +36,16 @@ dot.o : dot.c $(INC_DIR)/mnblas.h
 
 # BLAS 2
 
+
+gemv.o : dot.c $(INC_DIR)/mnblas.h
+	gcc  $(OPTIONS) -c dot.c
+
 # BLAS 3
+
+gemm.o : gemm.c $(INC_DIR)/mnblas.h
+	gcc  $(OPTIONS) -c gemm.c
+
+# CLEAN
 
 clean:
 	rm -f *.o *.a *.so *~  $(INC_DIR)/*~ $(LIB_DIR)/libmnblasdyn.so  $(LIB_DIR)/libmnblas.a 

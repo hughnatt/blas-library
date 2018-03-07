@@ -5,6 +5,16 @@ typedef enum {MNCblasUpper=121, MNCblasLower=122} MNCBLAS_UPLO;
 typedef enum {MNCblasNonUnit=131, MNCblasUnit=132} MNCBLAS_DIAG;
 typedef enum {MNCblasLeft=141, MNCblasRight=142} MNCBLAS_SIDE;
 
+typedef struct {
+  float re;
+  float im;
+} cplx_t;
+
+typedef struct {
+  double re;
+  double im;
+} cplxd_t;
+
 /*
  * ===========================================================================
  * Prototypes for level 1 BLAS functions 

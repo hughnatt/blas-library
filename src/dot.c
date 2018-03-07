@@ -22,6 +22,11 @@ double mncblas_ddot(const int N, const double *X, const int incX,
   register unsigned int j = 0 ;
   register double dot = 0.0 ;
   
+  for (; ((i < N) && (j < N)) ; i += incX, j+=incY)
+  {
+      dot = dot + X [i] * Y [j] ;
+  }
+
   return dot;
 }
 

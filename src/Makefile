@@ -61,6 +61,3 @@ gemm.o : gemm.c $(INC_DIR)/mnblas.h
 clean:
 	rm -f *.o *.a *.so *~  $(INC_DIR)/*~ $(LIB_DIR)/libmnblasdyn.so  $(LIB_DIR)/libmnblas.a 
 
-#hello
-
-

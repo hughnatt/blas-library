@@ -15,6 +15,9 @@ typedef struct {
   double im;
 } cplxd_t;
 
+cplx_t mult(cplx_t* a, cplx_t* b);
+cplxd_t multd(cplxd_t* a, cplxd_t* b);
+
 /*
  * ===========================================================================
  * Prototypes for level 1 BLAS functions 
@@ -127,7 +130,7 @@ void mncblas_zaxpy(const int N, const void *alpha, const void *X,
 
 
 
-
+/*
 float cblas_sasum (const int n, const float *x, const int incx);
 
 
@@ -147,7 +150,7 @@ double cblas_dnrm2(const int n, const double *x, const int incx);
 float cblas_scnrm2(const int n, const void *x, const int incx);
 
 double cblas_dznrm2(const int n, const void *x, const int incx);
-
+*/
 
 /*
  * ===========================================================================

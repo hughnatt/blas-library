@@ -30,37 +30,9 @@ double mncblas_ddot(const int N, const double *X, const int incX,
   return dot;
 }
 
-void   mncblas_cdotu_sub(const int N, const void *X, const int incX,
-                       const void *Y, const int incY, void *dotu)
-{
-  /* a completer */
-  
-  return ;
-}
 
-void   mncblas_zdotu_sub(const int N, const void *X, const int incX,
-                       const void *Y, const int incY, void *dotu)
-{
-  /* a completer */
   
-  return ;
-}
-  
-void   mncblas_zdotc_sub(const int N, const void *X, const int incX,
-                       const void *Y, const int incY, void *dotc)
-{
-  /* a completer */
-  
-  return ;
-}
 
-void   mncblas_cdotc_sub(const int N, const void *X, const int incX,
-                       const void *Y, const int incY, void *dotc)
-{
-  /* a completer */
-  
-  return ;
-}
 
 
 

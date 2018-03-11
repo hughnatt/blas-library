@@ -9,19 +9,27 @@ INC_DIR=../include
 OPTIM=-O2
 OPTIONS=-fPIC $(OPTIM) -I$(INC_DIR)
 
+SRCS= asum.c axpy.c copy.c dot.c dotc.c dotu.c gemm.c gemv.c nrm2.c swap.c
+OBJS= $(SRCS:.c=.o)
+
 # Bibliothèque statique
 
-libmnblas.a: copy.o swap.o
+libmnblas.a: $(OBJS)
 	rm -f libmnblas.a $(LIB_DIR)/libmnblas.a
-	ar -r libmnblas.a copy.o swap.o
+	ar -r libmnblas.a $(OBJS)
 	cp libmnblas.a $(LIB_DIR)
 
 # Bibliothèque dynamique
 
-libmnblasdyn.so:copy.o swap.o
+libmnblasdyn.so: $(OBJS)
 	rm -f libmnblasdyn.so $(LIB_DIR)/libmnblasdyn.so
-	gcc -shared -o libmnblasdyn.so copy.o swap.o
+	gcc -shared -o libmnblasdyn.so $(OBJS)
 	cp libmnblasdyn.so $(LIB_DIR)
+
+# Fonctions sur les types complexes
+
+cplx_t.o : cplx_t.c $(INC_DIR)/mnblas.h
+	gcc $(OPTIONS) -c cplx_t.c
 
 # BLAS 1
 
@@ -39,6 +47,9 @@ dot.o : dot.c $(INC_DIR)/mnblas.h
 
 dotc.o : dotc.c $(INC_DIR)/mnblas.h
 	gcc  $(OPTIONS) -c dotc.c
+
+dotu.o : dotu.c $(INC_DIR)/mnblas.h
+	gcc  $(OPTIONS) -c dotu.c
 
 nrm2.o : nrm2.c $(INC_DIR)/mnblas.h
 	gcc  $(OPTIONS) -c nrm2.c

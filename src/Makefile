@@ -9,7 +9,7 @@ INC_DIR=../include
 OPTIM=-O2
 OPTIONS=-fPIC $(OPTIM) -I$(INC_DIR)
 
-SRCS= asum.c axpy.c copy.c dot.c dotc.c dotu.c gemm.c gemv.c nrm2.c swap.c
+SRCS= cplx_t.c asum.c axpy.c copy.c dot.c dotc.c dotu.c gemm.c gemv.c nrm2.c swap.c
 OBJS= $(SRCS:.c=.o)
 
 # Bibliothèque statique

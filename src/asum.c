@@ -79,6 +79,3 @@ double mncblas_dzasum(const int n, const void *x, const int incX)
         asum += fabs(c[i + 2 * incX].re) + fabs(c[i + 2 * incX].im);
         asum += fabs(c[i + 3 * incX].re) + fabs(c[i + 3 * incX].im);
     }
-
-    return asum;
-}

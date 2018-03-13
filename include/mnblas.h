@@ -17,6 +17,10 @@ typedef struct {
 
 cplx_t mult(cplx_t* a, cplx_t* b);
 cplxd_t multd(cplxd_t* a, cplxd_t* b);
+cplx_t conj(cplx_t* a);
+cplxd_t conjd(cplxd_t* a);
+void add(cplx_t* a, cplx_t* b);
+void addd(cplxd_t* a, cplxd_t* b);
 
 /*
  * ===========================================================================

@@ -1,7 +1,7 @@
 #include "mnblas.h"
 
 
-void   mncblas_cdotu_sub(const int N, const void *X, const int incX,
+void   mncblas_cdotu_sub(const int N, const void* X, const int incX,
                        const void *Y, const int incY, void *dotu)
 {
   register unsigned int i = 0;

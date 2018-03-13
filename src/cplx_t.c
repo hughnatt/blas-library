@@ -15,27 +15,23 @@ void zmult(const cplxd_t* a, const cplxd_t* b, cplxd_t* result){
 
 }
 
-cplx_t cconj(const cplx_t a){
-    cplx_t cconj;
-    cconj.re = a.re;
-    cconj.im = -a.im;
-    return cconj;
+void cconj(const cplx_t* a, cplx_t* conj){
+    conj->re = a->re;
+    conj->im = -a->im;
 }
 
-cplxd_t zconj(const cplxd_t a){
-    cplxd_t zconj;
-    zconj.re = a.re;
-    zconj.im = -a.im;
-    return zconj;
+void zconj(const cplxd_t* a, cplxd_t* conj){
+    conj->re = a->re;
+    conj->im = -a->im;
 }
 
 // a = a + b
-void add(cplx_t* a, cplx_t* b){
+void cadd(cplx_t* a, const cplx_t* b){
     a->re = a->re + b->re;
     a->im = a->im + b->im;
 }
 // a = a + b
-void addd(cplxd_t* a, cplxd_t* b){
+void zadd(cplxd_t* a, const cplxd_t* b){
     a->re = a->re + b->re;
     a->im = a->im + b->im;
 }

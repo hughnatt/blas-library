@@ -20,8 +20,8 @@ void cblas_daxpy(const int n, const double a, const double *x, const int incx, d
 
 void cblas_caxpy(const int n, const void *a, const void *x, const int incx, void *y, const int incy){
     
-    cplx_t** array_x = (cplx_t**) x;
-    cplx_t** array_y = (cplx_t**) y;
+    cplx_t* array_x = (cplx_t*) x;
+    cplx_t* array_y = (cplx_t*) y;
     cplx_t* scalar_a = (cplx_t*)  a;
 
     cplx_t tmp_mult;

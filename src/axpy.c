@@ -22,11 +22,7 @@ void cblas_caxpy(const int n, const void *a, const void *x, const int incx, void
     
     cplx_t* array_x = (cplx_t*) x;
     cplx_t* array_y = (cplx_t*) y;
-<<<<<<< HEAD
-    cplx_t* scalar_a = (cplx_t*)  a;
-=======
     cplx_t* scalar_a = (cplx_t*) a;
->>>>>>> dev1
 
     cplx_t mult;
 

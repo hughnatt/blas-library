@@ -1,13 +1,13 @@
 #include <stdlib.h>
-#include <maths.h>
+#include <math.h>
 #include "mnblas.h"
 
-float cblas_sasum(const int n, const float *x, const int incx)
+float cblas_sasum(const int n, const float *x, const int incX)
 {
     float asum = 0.0;
     register unsigned int i = 0;
 
-    for (; (i < n); i += incx * 4)
+    for (; (i < n); i += incX * 4)
     {
         asum += fabsf(x[i]);
         asum += fabsf(x[i + 1*incX]);
@@ -18,13 +18,13 @@ float cblas_sasum(const int n, const float *x, const int incx)
     return asum;
 }
 
-float cblas_scasum(const int n, const void *x, const int incx)
+float cblas_scasum(const int n, const void *x, const int incX)
 {
     cplx_t *c = (cplx_t *)(x);
     float asum = 0.0;
     register unsigned int i = 0;
 
-    for (; (i < n); i += incx * 4)
+    for (; (i < n); i += incX * 4)
     {
         asum = asum + fabsf(c[i].re) + fabsf(c[i].im);
         asum = asum + fabsf(c[i + 1*incX].re) + fabsf(c[i + 1*incX].im);
@@ -35,12 +35,12 @@ float cblas_scasum(const int n, const void *x, const int incx)
     return asum;
 }
 
-double cblas_dasum(const int n, const double *x, const int incx)
+double cblas_dasum(const int n, const double *x, const int incX)
 {
     double asum = 0.0;
     register unsigned int i = 0;
 
-    for (; (i < n); i += incx * 4)
+    for (; (i < n); i += incX * 4)
     {
         asum += fabs(x[i]);
         asum += fabs(x[i + 1*incX]);
@@ -51,13 +51,13 @@ double cblas_dasum(const int n, const double *x, const int incx)
     return asum;
 }
 
-double cblas_dzasum(const int n, const void *x, const int incx)
+double cblas_dzasum(const int n, const void *x, const int incX)
 {
     cplx_t *c = (cplx_t *)(x);
     double asum = 0.0;
     register unsigned int i = 0;
 
-    for (; (i < n); i += incx * 4)
+    for (; (i < n); i += incX * 4)
     {
         asum = asum + fabs(c[i].re) + fabs(c[i].im);
         asum = asum + fabs(c[i + 1*incX].re) + fabs(c[i + 1*incX].im);

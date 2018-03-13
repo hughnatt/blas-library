@@ -7,7 +7,7 @@ LIB_DIR=../lib
 INC_DIR=../include
 
 OPTIM=-O2
-OPTIONS=-fPIC $(OPTIM) -I$(INC_DIR)
+OPTIONS=-fPIC $(OPTIM) -I$(INC_DIR) -lm
 
 SRCS= cplx_t.c asum.c axpy.c copy.c dot.c dotc.c dotu.c gemm.c gemv.c nrm2.c swap.c
 OBJS= $(SRCS:.c=.o)

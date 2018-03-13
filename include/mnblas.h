@@ -15,12 +15,14 @@ typedef struct {
   double im;
 } cplxd_t;
 
-cplx_t mult(cplx_t* a, cplx_t* b);
-cplxd_t multd(cplxd_t* a, cplxd_t* b);
-cplx_t conj(cplx_t* a);
-cplxd_t conjd(cplxd_t* a);
-void add(cplx_t* a, cplx_t* b);
-void addd(cplxd_t* a, cplxd_t* b);
+void cmult(const cplx_t* a, const cplx_t* b, cplx_t* mult);
+void zmult(const cplxd_t* a, const cplxd_t* b, cplxd_t* mult);
+
+void cconj(const cplx_t* a, cplx_t* conj);
+void zconj(const cplxd_t* a, cplxd_t* conj);
+
+void cadd(cplx_t* add, const cplx_t* x);
+void zadd(cplxd_t* add, const cplxd_t* x);
 
 /*
  * ===========================================================================

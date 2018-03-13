@@ -13,10 +13,21 @@
 #define VECSIZE 1000
 
 /*
+ *
+ */
+
+/*
  * Type vecteur : @vfloat 
  */
 typedef float vfloat[VECSIZE];
 vfloat vec1, vec2;
+
+typedef cplx_t vcomplex[VECSIZE];
+vcomplex vec1, vec2;
+/*
+ *
+ */
+
 
 /*
  * Initialisation d'un @vfloat avec une valeur fixe x

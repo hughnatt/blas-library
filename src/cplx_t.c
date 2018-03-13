@@ -1,49 +1,38 @@
 #include "mnblas.h"
 
-cplx_t mult(cplx_t* a, cplx_t* b){
-    cplx_t result;
-    
-    result.re = a->re * b->re + a->im * b->im;
-    result.im = a->re * b->im + b->re * a->im;
-
-    return result;
+void cmult(const cplx_t *a, const cplx_t *b, cplx_t *result)
+{
+    result->re = a->re * b->re + a->im * b->im;
+    result->im = a->re * b->im + b->re * a->im;
 }
 
-cplxd_t multd(cplxd_t* a, cplxd_t* b){
-    cplxd_t result;
-    
-    result.re = a->re * b->re + a->im * b->im;
-    result.im = a->re * b->im + b->re * a->im;
-
-    return result;
+void zmult(const cplxd_t *a, const cplxd_t *b, cplxd_t *result)
+{
+    result->re = a->re * b->re + a->im * b->im;
+    result->im = a->re * b->im + b->re * a->im;
 }
 
-cplx_t conj(cplx_t* a){
-    cplx_t result;
-
-    result.re = a->re;
-    result.im = -a->im;
-
-    return result;
+void cconj(const cplx_t *a, cplx_t *conj)
+{
+    conj->re = a->re;
+    conj->im = -a->im;
 }
 
-
-cplxd_t conjd(cplxd_t* a){
-    cplxd_t result;
-
-    result.re = a->re;
-    result.im = -a->im;
-
-    return result;
+void zconj(const cplxd_t *a, cplxd_t *conj)
+{
+    conj->re = a->re;
+    conj->im = -a->im;
 }
 
 // a = a + b
-void add(cplx_t* a, cplx_t* b){
+void cadd(cplx_t *a, const cplx_t *b)
+{
     a->re = a->re + b->re;
     a->im = a->im + b->im;
 }
 // a = a + b
-void addd(cplxd_t* a, cplxd_t* b){
+void zadd(cplxd_t *a, const cplxd_t *b)
+{
     a->re = a->re + b->re;
     a->im = a->im + b->im;
 }

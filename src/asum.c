@@ -2,7 +2,7 @@
 #include <math.h>
 #include "mnblas.h"
 
-float cblas_sasum(const int n, const float *x, const int incX)
+float mncblas_sasum(const int n, const float *x, const int incX)
 {
     float asum = 0.0;
     register unsigned int i = 0;
@@ -18,7 +18,7 @@ float cblas_sasum(const int n, const float *x, const int incX)
     return asum;
 }
 
-float cblas_scasum(const int n, const void *x, const int incX)
+float mncblas_scasum(const int n, const void *x, const int incX)
 {
     cplx_t *c = (cplx_t *)(x);
     float asum = 0.0;
@@ -35,7 +35,7 @@ float cblas_scasum(const int n, const void *x, const int incX)
     return asum;
 }
 
-double cblas_dasum(const int n, const double *x, const int incX)
+double mncblas_dasum(const int n, const double *x, const int incX)
 {
     double asum = 0.0;
     register unsigned int i = 0;
@@ -51,7 +51,7 @@ double cblas_dasum(const int n, const double *x, const int incX)
     return asum;
 }
 
-double cblas_dzasum(const int n, const void *x, const int incX)
+double mncblas_dzasum(const int n, const void *x, const int incX)
 {
     cplx_t *c = (cplx_t *)(x);
     double asum = 0.0;

@@ -136,27 +136,25 @@ void mncblas_zaxpy(const int N, const void *alpha, const void *X,
 
 
 
-/*
-float cblas_sasum (const int n, const float *x, const int incx);
+float mncblas_sasum (const int n, const float *x, const int incx);
 
 
-float cblas_scasum (const int n, const void *x, const int incx);
+float mncblas_scasum (const int n, const void *x, const int incx);
 
 
-double cblas_dasum (const int n, const double *x, const int incx);
+double mncblas_dasum (const int n, const double *x, const int incx);
 
 
-double cblas_dzasum (const int n, const void *x, const int incx);
+double mncblas_dzasum (const int n, const void *x, const int incx);
 
 
-float cblas_snrm2(const int n, const float *x, const int incx);
+float mncblas_snrm2(const int n, const float *x, const int incx);
 
-double cblas_dnrm2(const int n, const double *x, const int incx);
+double mncblas_dnrm2(const int n, const double *x, const int incx);
 
-float cblas_scnrm2(const int n, const void *x, const int incx);
+float mncblas_scnrm2(const int n, const void *x, const int incx);
 
-double cblas_dznrm2(const int n, const void *x, const int incx);
-*/
+double mncblas_dznrm2(const int n, const void *x, const int incx);
 
 /*
  * ===========================================================================

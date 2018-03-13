@@ -1,7 +1,7 @@
 #include "mnblas.h"
 #include "math.h"
 
-float cblas_snrm2(const int n, const float *x, const int incX)
+float mncblas_snrm2(const int n, const float *x, const int incX)
 {
     float nrm;
 
@@ -17,7 +17,7 @@ float cblas_snrm2(const int n, const float *x, const int incX)
     return sqrtf(nrm);
 }
 
-double cblas_dnrm2(const int n, const double *x, const int incX)
+double mncblas_dnrm2(const int n, const double *x, const int incX)
 {
     double nrm;
 
@@ -33,7 +33,7 @@ double cblas_dnrm2(const int n, const double *x, const int incX)
     return sqrt(nrm);
 }
 
-float cblas_scnrm2(const int n, const void *x, const int incX)
+float mncblas_scnrm2(const int n, const void *x, const int incX)
 {
     cplx_t *array_x = (cplx_t *)x;
 
@@ -59,7 +59,7 @@ float cblas_scnrm2(const int n, const void *x, const int incX)
     return sqrtf(nrm);
 }
 
-double cblas_dznrm2(const int n, const void *x, const int incX)
+double mncblas_dznrm2(const int n, const void *x, const int incX)
 {
     cplx_t *array_x = (cplx_t *)x;
 

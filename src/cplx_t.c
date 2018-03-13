@@ -1,21 +1,18 @@
 #include "mnblas.h"
 
-cplx_t mult(cplx_t* a, cplx_t* b){
+void cmult(cplx_t* a, cplx_t* b, cplx_t* result){
     cplx_t result;
     
-    result.re = a->re * b->re + a->im * b->im;
-    result.im = a->re * b->im + b->re * a->im;
-
-    return result;
+    result->re = a->re * b->re + a->im * b->im;
+    result->im = a->re * b->im + b->re * a->im;
 }
 
-cplxd_t multd(cplxd_t* a, cplxd_t* b){
+void zmult(cplxd_t* a, cplxd_t* b, cplxd_t* result){
     cplxd_t result;
     
-    result.re = a->re * b->re + a->im * b->im;
-    result.im = a->re * b->im + b->re * a->im;
+    result->re = a->re * b->re + a->im * b->im;
+    result->im = a->re * b->im + b->re * a->im;
 
-    return result;
 }
 
 cplx_t conj(cplx_t* a){

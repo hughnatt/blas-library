@@ -36,7 +36,7 @@ void mn_axpy_test_all(){
     vcplxd_rand(Y4);
     
 
-   // @@@@@@@@@@@@@@@@@@@@@
+    // @@@@@@@@@@@@@@@@@@@@@
     // @@@ ROUTINES AXPY @@@
     // @@@@@@@@@@@@@@@@@@@@@
 
@@ -91,11 +91,12 @@ void mn_axpy_test_all(){
     
     // --- zaxpy
     Complex_z beta;
-    beta.re = 2.0;
-    beta.im = 6.0;
+    beta.re = 1.0;
+    beta.im = 1.0;
     
+
     start = _rdtsc();
-    cblas_zaxpy(VECSIZE,(double*) &beta,(double*) X4,1,(double*) Y4,1);
+    cblas_zaxpy(VECSIZE, (double*) &beta, (double*) X4,1, (double*) Y4,1);
     end = _rdtsc();
     
     start = _rdtsc();
@@ -107,4 +108,5 @@ void mn_axpy_test_all(){
     cblas_zaxpy(VECSIZE,(double*) &beta,(double*) X4,1,(double*) Y4,1);
     end = _rdtsc();
     printf("cblas_zaxpy: nombre de cycles: %Ld \n", end - start - residu);
+
 }

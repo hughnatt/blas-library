@@ -1,4 +1,18 @@
+/*
+ * RICM3 - Méthodes Numériques - 2018
+ * ANCRENAZ Ariane - SAUTON Tanguy
+ * C Implementation of BLAS routines
+ */
+
 #include "mnblas.h"
+
+/*
+ * cblas_?dotc
+ * Computes a dot product of a conjugated vector with another vector
+ * res = SUM(i from 1 to n){ conjg(Xi) * Yi}
+ * 
+ * Types : c / z
+ */ 
 
 void mncblas_cdotc_sub(const int N, const void *X, const int incX,
                        const void *Y, const int incY, void *dotc)

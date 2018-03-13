@@ -1,5 +1,19 @@
+/*
+ * RICM3 - Méthodes Numériques - 2018
+ * ANCRENAZ Ariane - SAUTON Tanguy
+ * C Implementation of BLAS routines
+ */
+
 #include "mnblas.h"
 #include "math.h"
+
+/*
+ * cblas_?nrm2
+ * Computes the Euclidean norm of a vector
+ * res = ||x||
+ *
+ * Types = s / d / sc / dz 
+ */ 
 
 float mncblas_snrm2(const int n, const float *x, const int incX)
 {
@@ -8,10 +22,10 @@ float mncblas_snrm2(const int n, const float *x, const int incX)
     register unsigned int i = 0;
     for (; (i < n); i += incX * 4)
     {
-        nrm += x[i] * x[i];
-        nrm += x[i + 1*incX] * x[i + 1*incX];
-        nrm += x[i + 2*incX] * x[i + 2*incX];
-        nrm += x[i + 3*incX] * x[i + 3*incX];
+        nrm += powf(x[i],2.0);
+        nrm += powf(x[i + incX],2.0);
+        nrm += powf(x[i + 2*incX],2.0);
+        nrm += powf(x[i + 3*incX],2.0);
     }
 
     return sqrtf(nrm);
@@ -24,10 +38,10 @@ double mncblas_dnrm2(const int n, const double *x, const int incX)
     register unsigned int i = 0;
     for (; (i < n); i += incX * 4)
     {
-        nrm += x[i] * x[i];
-        nrm += x[i + 1*incX] * x[i + 1*incX];
-        nrm += x[i + 2*incX] * x[i + 2*incX];
-        nrm += x[i + 3*incX] * x[i + 3*incX];
+        nrm += pow(x[i],2.0);
+        nrm += pow(x[i + incX],2.0);
+        nrm += pow(x[i + 2*incX],2.0);
+        nrm += pow(x[i + 3*incX],2.0);
     }
 
     return sqrt(nrm);

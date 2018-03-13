@@ -1,4 +1,18 @@
+/*
+ * RICM3 - Méthodes Numériques - 2018
+ * ANCRENAZ Ariane - SAUTON Tanguy
+ * C Implementation of BLAS routines
+ */
+
 #include "mnblas.h"
+
+/*
+ * cblas_?swap
+ * Swaps a vector with another vector
+ * X <==> Y
+ * 
+ * Types : s / d / c / z
+ */
 
 void mncblas_sswap(const int N, float *X, const int incX,
                    float *Y, const int incY)

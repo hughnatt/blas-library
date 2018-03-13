@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-#define VECSIZE 100
+#define VECSIZE 400
 
 typedef struct {
     float re;
@@ -8,8 +8,8 @@ typedef struct {
 } Complex_c;
 
 typedef struct {
-    float re;
-    float im;
+    double re;
+    double im;
 } Complex_z;
 
 /*

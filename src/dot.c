@@ -1,4 +1,18 @@
+/*
+ * RICM3 - Méthodes Numériques - 2018
+ * ANCRENAZ Ariane - SAUTON Tanguy
+ * C Implementation of BLAS routines
+ */
+
 #include "mnblas.h"
+
+/*
+ * cblas_?dot
+ * Computes a vector-vector dot product
+ * res = SUM(i from 1 to N){Xi * Yi}
+ * 
+ * Types : s / d
+ */
 
 float mncblas_sdot(const int N, const float *X, const int incX,
                    const float *Y, const int incY)

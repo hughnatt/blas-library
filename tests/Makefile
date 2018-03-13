@@ -24,7 +24,7 @@ mntestdyn: mntest.o $(LIB_DIR)/libmnblasdyn.so $(OBJS)
 mntest.o: mntest.c $(INC_DIR)/mnblas.h $(INC_DIR)/mntest.h
 	gcc $(OPTIONS_COMPIL) -c mntest.c
 
-%.o : %.c $(INC_DIR)/mnblas.h
+%.o : %.c $(INC_DIR)/mnblas.h $(INC_DIR)/mntest.h
 	gcc $(OPTIONS_COMPIL) -c $<
 
 clean:

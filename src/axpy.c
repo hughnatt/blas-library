@@ -43,7 +43,6 @@ void mncblas_daxpy(const int n, const double a, const double *x,
     }
 }
 
-<<<<<<< HEAD
 void mncblas_caxpy(const int n, const void *a, const void *x, 
                    const int incx, void *y, const int incy)
 {
@@ -51,13 +50,6 @@ void mncblas_caxpy(const int n, const void *a, const void *x,
     cplx_t *array_x = (cplx_t *)x;
     cplx_t *array_y = (cplx_t *)y;
     cplx_t *scalar_a = (cplx_t *)a;
-=======
-void cblas_caxpy(const int n, const void *a, const void *x, const int incx, void *y, const int incy){
-    
-    cplx_t* array_x = (cplx_t*) x;
-    cplx_t* array_y = (cplx_t*) y;
-    cplx_t* scalar_a = (cplx_t*) a;
->>>>>>> dev2
 
     cplx_t mult;
 

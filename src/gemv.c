@@ -7,8 +7,6 @@ void mncblas_sgemv(const MNCBLAS_LAYOUT Layout, const MNCBLAS_TRANSPOSE trans, c
                  const float beta, float *y, const int incy)
 {
 
-<<<<<<< HEAD
-=======
     register unsigned int i = 0;
     register unsigned int j = 0;
     float temp;
@@ -41,16 +39,12 @@ void mncblas_sgemv(const MNCBLAS_LAYOUT Layout, const MNCBLAS_TRANSPOSE trans, c
         temp = temp * alpha;
         y[i]=temp + beta*y[i];
     }
->>>>>>> dev2
 }
 
 void mncblas_dgemv(const MNCBLAS_LAYOUT Layout, const MNCBLAS_TRANSPOSE trans, const int m, const int n,
                  const double alpha, const double *a, const int lda, const double *x, const int incx, 
                  const double beta, double *y, const int incy)
 {
-<<<<<<< HEAD
-
-=======
     register unsigned int i = 0;
     register unsigned int j = 0;
     double temp;
@@ -83,16 +77,12 @@ void mncblas_dgemv(const MNCBLAS_LAYOUT Layout, const MNCBLAS_TRANSPOSE trans, c
         temp = temp * alpha;
         y[i]=temp + beta*y[i];
     }
->>>>>>> dev2
 }
 
 void mncblas_cgemv(const MNCBLAS_LAYOUT Layout, const MNCBLAS_TRANSPOSE trans, const int m, const int n, 
                  const void *alpha, const void *a, const int lda, const void *x, const int incx, 
                  const void *beta, void *y, const int incy)
 {
-<<<<<<< HEAD
-
-=======
 
     register unsigned int i = 0;
     register unsigned int j = 0;
@@ -150,7 +140,6 @@ void mncblas_cgemv(const MNCBLAS_LAYOUT Layout, const MNCBLAS_TRANSPOSE trans, c
         array_y[i].re = temp.re + *(float*)beta*array_y[i].re;
         array_y[i].im = temp.im + *(float*)beta*array_y[i].im;
     }
->>>>>>> dev2
 }
 void mncblas_zgemv(const MNCBLAS_LAYOUT Layout, const MNCBLAS_TRANSPOSE trans, const int m, const int n, 
                  const void *alpha, const void *a, const int lda, const void *x, const int incx, 
